@@ -1,0 +1,536 @@
+Mounting /home/MariscalCristina23...
+Welcome to foobar version 1-334-gb197a14-beta (2020-10-14T01:37:43.143855)
+Success! You've managed to infiltrate Commander Lambda's evil organization, and finally earned yourself an entry-level position as a Minion on her space station. From here, you just might be able to subvert her plans to use the LAMBCHOP doomsday device to destroy Bunny Planet. Problem is, Minions are the lowest of the low in the Lambda hierarchy. Better buck up and get working, or you'll never make it to the top...
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ ls
+journal.txt
+start_here.txt
+foobar:~/ MariscalCristina23$ help
+Use the following shell commands:
+
+cd	change directory [dir_name]
+cat	print file [file_name]
+deleteme	delete all of your data associated with foobar
+edit	open file in editor [file_name]
+feedback	provide feedback on foobar
+less	print a file a page at a time [file_name]
+ls	list directory contents [dir_name]
+request	request new challenge
+status	print progress
+submit	submit final solution file for assessment [file_name]
+verify	runs tests on solution file [file_name]
+
+Keyboard help:
+
+Ctrl + S	save the open file [when editor is focused]
+Ctrl + E	close the editor [when editor is focused]
+
+Toggle between the editor and terminal using ESC followed by TAB, then activate with ENTER.
+
+foobar:~/ MariscalCristina23$ request
+You are about to begin a time-limited challenge which you will have 48 hours to complete.
+Do you wish to proceed and start your first challenge?
+[Y]es or [N]o: Y
+Requesting challenge...
+Next time Bunny HQ needs someone to infiltrate a space station to rescue prisoners, you're going to tell them to make sure 'stay up for 48 hours straight scrubbing toilets' is part of the job description. It's only fair to warn people, after all.
+New challenge "Braille Translation" added to your home folder.
+Time to solve: 48 hours.
+foobar:~/ MariscalCristina23$ ls
+braille-translation
+journal.txt
+start_here.txt
+foobar:~/ MariscalCristina23$ ls braille-translation/
+Solution.java
+constraints.txt
+readme.txt
+solution.py
+foobar:~/ MariscalCristina23$ cat braille-translation/readme.txt 
+Braille Translation
+===================
+
+Because Commander Lambda is an equal-opportunity despot, she has several visually-impaired minions. But she never bothered to follow intergalactic standards for workplace accommodations, so those minions have a hard time navigating her space station. You figure printing out Braille signs will help them, and - since you'll be promoting efficiency at the same time - increase your chances of a promotion. 
+
+Braille is a writing system used to read by touch instead of by sight. Each character is composed of 6 dots in a 2x3 grid, where each dot can either be a bump or be flat (no bump). You plan to translate the signs around the space station to Braille so that the minions under Commander Lambda's command can feel the bumps on the signs and ""read"" the text with their touch. The special printer which can print the bumps onto the signs expects the dots in the following order:
+1 4
+2 5
+3 6
+
+So given the plain text word ""code"", you get the Braille dots:
+
+11 10 11 10
+00 01 01 01
+00 10 00 00
+
+where 1 represents a bump and 0 represents no bump.  Put together, ""code"" becomes the output string ""100100101010100110100010"".
+
+Write a function solution(plaintext) that takes a string parameter and returns a string of 1's and 0's representing the bumps and absence of bumps in the input string. Your function should be able to encode the 26 lowercase letters, handle capital letters by adding a Braille capitalization mark before that character, and use a blank character (000000) for spaces. All signs on the space station are less than fifty characters long and use only letters and spaces.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit Solution.java
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Python cases --
+Input:
+solution.solution("code")
+Output:
+    100100101010100110100010
+
+Input:
+solution.solution("Braille")
+Output:
+    000001110000111010100000010100111000111000100010
+
+Input:
+solution.solution("The quick brown fox jumps over the lazy dog")
+Output:
+    000001011110110010100010000000111110101001010100100100101000000000110000111010101010010111101110000000110100101010101101000000010110101001101100111100011100000000101010111001100010111010000000011110110010100010000000111000100000101011101111000000100110101010110110
+
+-- Java cases --
+Input:
+Solution.solution("code")
+Output:
+    100100101010100110100010
+
+Input:
+Solution.solution("Braille")
+Output:
+    000001110000111010100000010100111000111000100010
+
+Input:
+Solution.solution("The quick brown fox jumps over the lazy dog")
+Output:
+    000001011110110010100010000000111110101001010100100100101000000000110000111010101010010111101110000000110100101010101101000000010110101001101100111100011100000000101010111001100010111010000000011110110010100010000000111000100000101011101111000000100110101010110110
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ cat braille-translation/solution.py 
+def​ ​solution(s):
+​ ​​ ​​ ​​ ​#​ ​Your​ ​code​ ​here
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ edit braille-translation/
+solution.py    readme.txt    constraints.txt    Solution.java
+foobar:~/ MariscalCristina23$ edit braille-translation/solution.py 
+foobar:~/ MariscalCristina23$ verify braille-translation/solution.py 
+Verifying solution...
+Test 1 passed!
+Test 2 failed 
+Test 3 failed 
+Test 4 passed! [Hidden]
+Test 5 failed  [Hidden]
+Test 6 failed  [Hidden]
+Test 7 failed  [Hidden]
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ edit braille-translation/solution.py 
+foobar:~/ MariscalCristina23$ verify braille-translation/solution.py 
+Verifying solution...
+All test cases passed. Use submit solution.py to submit your solution
+foobar:~/ MariscalCristina23$ submit braille-translation/solution.py 
+Are you sure you want to submit your solution?
+[Y]es or [N]o: Y
+Submitting solution...
+You survived a week in Commander Lambda's organization, and you even managed to get yourself promoted. Hooray! Henchmen still don't have the kind of security access you'll need to take down Commander Lambda, though, so you'd better keep working. Chop chop!
+Submission: SUCCESSFUL. Completed in: 22 mins, 43 secs.
+
+
+
+
+
+
+
+
+
+                                                                                                           @@ @@
+                                                                                                         /@%%%$%@
+                                                                                                         @((%%/////@
+                                                                                                        @///@~//// @
+                                                                                                        @//@///////@
+                                                                                                        @//%@~~~~~@
+                                                                                                      //@$$$@////~~@
+                                                                                                     @   %/@%//$////@@
+                                                                                                    @////(((((/~       ///%%//////@//
+                                                                                                  @////////       %@~~~~~~~/////@@\
+                                                                                                  @////////        % ~~~~~~~~~///@@
+                                                                                                  @/////(       ~~~ ~~~~~~~~////////@
+                                                                                                  @////          ~~~~~~~~~~~~~~~///@
+                                                                                                    @@\//       ~~~~~~~~~~~~~~~//@@@@@
+                                                                                                       @@       ~~~~~~~~~~~~~(%$$$$$%%@
+                                                                                                         @@      ~~~~~~~~~~(((($$$$$$%%@@
+                                                                                                            @      ~~~~~~~~(///$$$$$$$%%@
+                                                                                                           @      $$/    ~~~~((@$$$$$%%@
+                                                                                                         @     %       (((((((((%@@@$$$@
+                                                                                                         @@%%   @ /   $$$$%%%%%%%@
+                                                                                                                @////@@@@@@@@@@@@
+Level 1 complete
+You are now on level 2
+Challenges left to complete level: 2
+
+Level 1: 100% [==========================================]
+Level 2:   0% [..........................................]
+Level 3:   0% [..........................................]
+Level 4:   0% [..........................................]
+Level 5:   0% [..........................................]
+
+Type request to request a new challenge now, or come back later.
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ request
+Requesting challenge...
+You got the guards to teach you a card game today, it's called Fizzbin. It's kind of pointless, but they seem to like it and it helps you pass the time while you work your way up to Commander Lambda's inner circle.
+New challenge "Elevator Maintenance" added to your home folder.
+Time to solve: 72 hours.
+foobar:~/ MariscalCristina23$ ls
+elevator-maintenance
+journal.txt
+start_here.txt
+foobar:~/ MariscalCristina23$ cat elevator-maintenance/readme.txt 
+Elevator Maintenance
+====================
+
+You've been assigned the onerous task of elevator maintenance - ugh! It wouldn't be so bad, except that all the elevator documentation has been lying in a disorganized pile at the bottom of a filing cabinet for years, and you don't even know what elevator version numbers you'll be working on. 
+
+Elevator versions are represented by a series of numbers, divided up into major, minor and revision integers. New versions of an elevator increase the major number, e.g. 1, 2, 3, and so on. When new features are added to an elevator without being a complete new version, a second number named "minor" can be used to represent those new additions, e.g. 1.0, 1.1, 1.2, etc. Small fixes or maintenance work can be represented by a third number named "revision", e.g. 1.1.1, 1.1.2, 1.2.0, and so on. The number zero can be used as a major for pre-release versions of elevators, e.g. 0.1, 0.5, 0.9.2, etc (Commander Lambda is careful to always beta test her new technology, with her loyal henchmen as subjects!).
+
+Given a list of elevator versions represented as strings, write a function solution(l) that returns the same list sorted in ascending order by major, minor, and revision number so that you can identify the current elevator version. The versions in list l will always contain major numbers, but minor and revision numbers are optional. If the version contains a revision number, then it will also have a minor number.
+
+For example, given the list l as ["1.1.2", "1.0", "1.3.3", "1.0.12", "1.0.2"], the function solution(l) would return the list ["1.0", "1.0.2", "1.0.12", "1.1.2", "1.3.3"]. If two or more versions are equivalent but one version contains more numbers than the others, then these versions must be sorted ascending based on how many numbers they have, e.g ["1", "1.0", "1.0.0"]. The number of elements in the list l will be at least 1 and will not exceed 100.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit Solution.java
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Python cases --
+Input:
+solution.solution(["1.11", "2.0.0", "1.2", "2", "0.1", "1.2.1", "1.1.1", "2.0"])
+Output:
+    0.1,1.1.1,1.2,1.2.1,1.11,2,2.0,2.0.0
+
+Input:
+solution.solution(["1.1.2", "1.0", "1.3.3", "1.0.12", "1.0.2"])
+Output:
+    1.0,1.0.2,1.0.12,1.1.2,1.3.3
+
+-- Java cases --
+Input:
+Solution.solution({"1.11", "2.0.0", "1.2", "2", "0.1", "1.2.1", "1.1.1", "2.0"})
+Output:
+    0.1,1.1.1,1.2,1.2.1,1.11,2,2.0,2.0.0
+
+Input:
+Solution.solution({"1.1.2", "1.0", "1.3.3", "1.0.12", "1.0.2"})
+Output:
+    1.0,1.0.2,1.0.12,1.1.2,1.3.3
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ edit elevator-maintenance/solution.py 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ verify elevator-maintenance/solution.py
+Verifying solution...
+Test 1 failed 
+Test 2 failed 
+Test 3 failed  [Hidden]
+Test 4 failed  [Hidden]
+Test 5 failed  [Hidden]
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ edit elevator-maintenance/solution.py 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ 
+foobar:~/ MariscalCristina23$ verify elevator-maintenance/solution.py
+Verifying solution...
+All test cases passed. Use submit solution.py to submit your solution
+foobar:~/ MariscalCristina23$ submit elevator-maintenance/solution.py
+Are you sure you want to submit your solution?
+[Y]es or [N]o: Y
+Submitting solution...
+Submission: SUCCESSFUL. Completed in: 52 mins, 49 secs.
+
+Current level: 2
+Challenges left to complete level: 1
+
+Level 1: 100% [==========================================]
+Level 2:  50% [=====================.....................]
+Level 3:   0% [..........................................]
+Level 4:   0% [..........................................]
+Level 5:   0% [..........................................]
+
+Type request to request a new challenge now, or come back later.
+foobar:~/ MariscalCristina23$ request
+Requesting challenge...
+Rumor has it the prison guards are inexplicably fond of bananas. You're an apple person yourself, but you file the information away for future reference. You never know when you might need to bribe a guard (or three)...
+New challenge "Lovely Lucky LAMBs" added to your home folder.
+Time to solve: 72 hours.
+foobar:~/ MariscalCristina23$ cat lovely-lucky-lambs/readme.txt 
+Lovely Lucky LAMBs
+==================
+
+Being a henchman isn't all drudgery. Occasionally, when Commander Lambda is feeling generous, she'll hand out Lucky LAMBs (Lambda's All-purpose Money Bucks). Henchmen can use Lucky LAMBs to buy things like a second pair of socks, a pillow for their bunks, or even a third daily meal!
+
+However, actually passing out LAMBs isn't easy. Each henchman squad has a strict seniority ranking which must be respected - or else the henchmen will revolt and you'll all get demoted back to minions again! 
+
+There are 4 key rules which you must follow in order to avoid a revolt:
+    1. The most junior henchman (with the least seniority) gets exactly 1 LAMB.  (There will always be at least 1 henchman on a team.)
+    2. A henchman will revolt if the person who ranks immediately above them gets more than double the number of LAMBs they do.
+    3. A henchman will revolt if the amount of LAMBs given to their next two subordinates combined is more than the number of LAMBs they get.  (Note that the two most junior henchmen won't have two subordinates, so this rule doesn't apply to them.  The 2nd most junior henchman would require at least as many LAMBs as the most junior henchman.)
+    4. You can always find more henchmen to pay - the Commander has plenty of employees.  If there are enough LAMBs left over such that another henchman could be added as the most senior while obeying the other rules, you must always add and pay that henchman.
+
+Note that you may not be able to hand out all the LAMBs. A single LAMB cannot be subdivided. That is, all henchmen must get a positive integer number of LAMBs.
+
+Write a function called solution(total_lambs), where total_lambs is the integer number of LAMBs in the handout you are trying to divide. It should return an integer which represents the difference between the minimum and maximum number of henchmen who can share the LAMBs (that is, being as generous as possible to those you pay and as stingy as possible, respectively) while still obeying all of the above rules to avoid a revolt.  For instance, if you had 10 LAMBs and were as generous as possible, you could only pay 3 henchmen (1, 2, and 4 LAMBs, in order of ascending seniority), whereas if you were as stingy as possible, you could pay 4 henchmen (1, 1, 2, and 3 LAMBs). Therefore, solution(10) should return 4-3 = 1.
+
+To keep things interesting, Commander Lambda varies the sizes of the Lucky LAMB payouts. You can expect total_lambs to always be a positive integer less than 1 billion (10 ^ 9).
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit Solution.java
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Python cases --
+Input:
+solution.solution(143)
+Output:
+    3
+
+Input:
+solution.solution(10)
+Output:
+    1
+
+-- Java cases --
+Input:
+Solution.solution(143)
+Output:
+    3
+
+Input:
+Solution.solution(10)
+Output:
+    1
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/ MariscalCristina23$  
+
+solution.py
+You have unsaved changes on this file.
+Are you sure you want to close? (y/N) 
+
+Save changes
+S Save E Close
+02:23:58:37
+remaining for "lovely-lucky-lambs"
+Google About Google Privacy & Terms
+
+foobar:~/ MariscalCristina23$ cat find-the-access-codes/readme.txt 
+Find the Access Codes
+=====================
+
+In order to destroy Commander Lambda's LAMBCHOP doomsday device, you'll need access to it. But the only door leading to the LAMBCHOP chamber is secured with a unique lock system whose number of passcodes changes daily. Commander Lambda gets a report every day that includes the locks' access codes, but only she knows how to figure out which of several lists contains the access codes. You need to find a way to determine which list contains the access codes once you're ready to go in. 
+
+Fortunately, now that you're Commander Lambda's personal assistant, she's confided to you that she made all the access codes "lucky triples" in order to help her better find them in the lists. A "lucky triple" is a tuple (x, y, z) where x divides y and y divides z, such as (1, 2, 4). With that information, you can figure out which list contains the number of access codes that matches the number of locks on the door when you're ready to go in (for example, if there's 5 passcodes, you'd need to find a list with 5 "lucky triple" access codes).
+
+Write a function solution(l) that takes a list of positive integers l and counts the number of "lucky triples" of (li, lj, lk) where the list indices meet the requirement i < j < k.  The length of l is between 2 and 2000 inclusive.  The elements of l are between 1 and 999999 inclusive.  The answer fits within a signed 32-bit integer. Some of the lists are purposely generated without any access codes to throw off spies, so if no triples are found, return 0. 
+
+For example, [1, 2, 3, 4, 5, 6] has the triples: [1, 2, 4], [1, 2, 6], [1, 3, 6], making the answer 3 total.
+
+Languages
+=========
+
+To provide a Java solution, edit Solution.java
+To provide a Python solution, edit solution.py
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Java cases --
+Input:
+Solution.solution([1, 1, 1])
+Output:
+    1
+
+Input:
+Solution.solution([1, 2, 3, 4, 5, 6])
+Output:
+    3
+
+-- Python cases --
+Input:
+solution.solution([1, 2, 3, 4, 5, 6])
+Output:
+    3
+
+Input:
+solution.solution([1, 1, 1])
+Output:
+    1
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/ MariscalCristina23$ 
+
+
+foobar:~/ MariscalCristina23$ request
+Requesting challenge...
+There are a lot of difficult things about being undercover as Commander Lambda's personal assistant, but you have to say, the personal spa and private hot cocoa bar are pretty awesome.
+New challenge "Doomsday Fuel" added to your home folder.
+Time to solve: 96 hours.
+foobar:~/ MariscalCristina23$ ls
+doomsday-fuel
+journal.txt
+start_here.txt
+foobar:~/ MariscalCristina23$ cat doomsday-fuel/readme.txt 
+Doomsday Fuel
+=============
+
+Making fuel for the LAMBCHOP's reactor core is a tricky process because of the exotic matter involved. It starts as raw ore, then during processing, begins randomly changing between forms, eventually reaching a stable form. There may be multiple stable forms that a sample could ultimately reach, not all of which are useful as fuel. 
+
+Commander Lambda has tasked you to help the scientists increase fuel creation efficiency by predicting the end state of a given ore sample. You have carefully studied the different structures that the ore can take and which transitions it undergoes. It appears that, while random, the probability of each structure transforming is fixed. That is, each time the ore is in 1 state, it has the same probabilities of entering the next state (which might be the same state).  You have recorded the observed transitions in a matrix. The others in the lab have hypothesized more exotic forms that the ore can become, but you haven't seen all of them.
+
+Write a function solution(m) that takes an array of array of nonnegative ints representing how many times that state has gone to the next state and return an array of ints for each terminal state giving the exact probabilities of each terminal state, represented as the numerator for each state, then the denominator for all of them at the end and in simplest form. The matrix is at most 10 by 10. It is guaranteed that no matter which state the ore is in, there is a path from that state to a terminal state. That is, the processing will always eventually end in a stable state. The ore starts in state 0. The denominator will fit within a signed 32-bit integer during the calculation, as long as the fraction is simplified regularly. 
+
+For example, consider the matrix m:
+[
+  [0,1,0,0,0,1],  # s0, the initial state, goes to s1 and s5 with equal probability
+  [4,0,0,3,2,0],  # s1 can become s0, s3, or s4, but with different probabilities
+  [0,0,0,0,0,0],  # s2 is terminal, and unreachable (never observed in practice)
+  [0,0,0,0,0,0],  # s3 is terminal
+  [0,0,0,0,0,0],  # s4 is terminal
+  [0,0,0,0,0,0],  # s5 is terminal
+]
+So, we can consider different paths to terminal states, such as:
+s0 -> s1 -> s3
+s0 -> s1 -> s0 -> s1 -> s0 -> s1 -> s4
+s0 -> s1 -> s0 -> s5
+Tracing the probabilities of each, we find that
+s2 has probability 0
+s3 has probability 3/14
+s4 has probability 1/7
+s5 has probability 9/14
+So, putting that together, and making a common denominator, gives an answer in the form of
+[s2.numerator, s3.numerator, s4.numerator, s5.numerator, denominator] which is
+[0, 3, 2, 9, 14].
+
+Languages
+=========
+
+To provide a Java solution, edit Solution.java
+To provide a Python solution, edit solution.py
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Java cases --
+Input:
+Solution.solution({{0, 2, 1, 0, 0}, {0, 0, 0, 3, 4}, {0, 0, 0, 0, 0}, {0, 0, 0, 0,0}, {0, 0, 0, 0, 0}})
+Output:
+    [7, 6, 8, 21]
+
+Input:
+Solution.solution({{0, 1, 0, 0, 0, 1}, {4, 0, 0, 3, 2, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}})
+Output:
+    [0, 3, 2, 9, 14]
+
+-- Python cases --
+Input:
+solution.solution([[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0,0], [0, 0, 0, 0, 0]])
+Output:
+    [7, 6, 8, 21]
+
+Input:
+solution.solution([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]])
+Output:
+    [0, 3, 2, 9, 14]
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/ MariscalCristina23$  
+
+You have unsaved changes on this file.
+Are you sure you want to close? (y/N) 
+
+Save changes
+S Save E Close
+03:15:03:37
+remaining for "doomsday-fuel"
+Google About Google Privacy & Terms
+
+
+
+
+
+foobar:~/ MariscalCristina23$ cat bomb-baby/readme.txt 
+Bomb, Baby!
+===========
+
+You're so close to destroying the LAMBCHOP doomsday device you can taste it! But in order to do so, you need to deploy special self-replicating bombs designed for you by the brightest scientists on Bunny Planet. There are two types: Mach bombs (M) and Facula bombs (F). The bombs, once released into the LAMBCHOP's inner workings, will automatically deploy to all the strategic points you've identified and destroy them at the same time. 
+
+But there's a few catches. First, the bombs self-replicate via one of two distinct processes: 
+Every Mach bomb retrieves a sync unit from a Facula bomb; for every Mach bomb, a Facula bomb is created;
+Every Facula bomb spontaneously creates a Mach bomb.
+
+For example, if you had 3 Mach bombs and 2 Facula bombs, they could either produce 3 Mach bombs and 5 Facula bombs, or 5 Mach bombs and 2 Facula bombs. The replication process can be changed each cycle. 
+
+Second, you need to ensure that you have exactly the right number of Mach and Facula bombs to destroy the LAMBCHOP device. Too few, and the device might survive. Too many, and you might overload the mass capacitors and create a singularity at the heart of the space station - not good! 
+
+And finally, you were only able to smuggle one of each type of bomb - one Mach, one Facula - aboard the ship when you arrived, so that's all you have to start with. (Thus it may be impossible to deploy the bombs to destroy the LAMBCHOP, but that's not going to stop you from trying!) 
+
+You need to know how many replication cycles (generations) it will take to generate the correct amount of bombs to destroy the LAMBCHOP. Write a function solution(M, F) where M and F are the number of Mach and Facula bombs needed. Return the fewest number of generations (as a string) that need to pass before you'll have the exact number of bombs necessary to destroy the LAMBCHOP, or the string "impossible" if this can't be done! M and F will be string representations of positive integers no larger than 10^50. For example, if M = "2" and F = "1", one generation would need to pass, so the solution would be "1". However, if M = "2" and F = "4", it would not be possible.
+
+Languages
+=========
+
+To provide a Java solution, edit Solution.java
+To provide a Python solution, edit solution.py
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Java cases --
+Input:
+Solution.solution('2', '1')
+Output:
+    1
+
+Input:
+Solution.solution('4', '7')
+Output:
+    4
+
+-- Python cases --
+Input:
+solution.solution('4', '7')
+Output:
+    4
+
+Input:
+solution.solution('2', '1')
+Output:
+    1
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
